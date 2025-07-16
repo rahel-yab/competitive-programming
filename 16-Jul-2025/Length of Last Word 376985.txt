@@ -1,0 +1,6 @@
+# Problem: Length of Last Word - https://leetcode.com/problems/length-of-last-word/description/
+
+func lengthOfLastWord(s string) int {
+    sp := strings.Fields(s)
+    return len(sp[len(sp) -1])
+}
