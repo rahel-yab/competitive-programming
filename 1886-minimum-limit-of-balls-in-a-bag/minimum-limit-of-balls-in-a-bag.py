@@ -1,7 +1,8 @@
 class Solution:
     def minimumSize(self, nums: List[int], maxOperations: int) -> int:
+        nums.sort()
         def validate(mid):
-            curr = sorted(nums)
+            curr = nums.copy()
             c = 0
             while curr and curr[-1] > mid:
                 c += ceil(curr[-1] / mid) - 1
